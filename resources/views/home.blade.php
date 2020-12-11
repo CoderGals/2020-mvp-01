@@ -23,35 +23,13 @@
     </div>
     <div class="row justify-content-center content">
         @foreach($gifts as $gift)
-        <div class="col-md-3 mt-2">
-            <div class="card">
-                <div class="card-header">{{ $gift->name }}</div>
-
-                <div class="card-body">
-                    <img class="w-100 h-auto" src="{{  $gift->pic_url }}" />
-                    <p>{{ $gift->description }}</p>
-                </div>
-                <div class="card-footer">
-                    <span class="d-block" style="float:left">{{ $gift->price }} $</span>
-                    @if(isset(session()->get('cart')[$gift->id]))
-                    <span class="d-block" style="float:right">x{{ session()->get('cart')[$gift->id]['quantity'] }} on cart</span>
-                    <br/>
-                    <div class="d-flex justify-content-between mt-3">
-                        <a href="{{ route('add.cart', $gift) }}" class="btn btn-success pull-right" style="float:right"><i class="fa fa-plus"></i></a>
-                        <a href="{{ route('remove.cart', $gift) }}" class="btn btn-danger pull-right" style="float:right"><i class="fa fa-trash"></i></a>
-                    </div>
-                    @else
-                    <a href="{{ route('add.cart', $gift) }}" class="btn btn-success pull-right" style="float:right">Add to cart</a>
-                    @endif
-                </div>
-            </div>
-        </div>
+       @include('gift', $gift)
         @endforeach
         <div class="col-lg-12 mt-4">
             {!! $gifts->links("pagination::bootstrap-4") !!}
         </div>
     </div>
-    <a><i></i></a>
+    <a class="btn btn-primary btn-lg" style="position:fixed;top:92%;left:95%;z-index:999999999"><i class="fa fa-cart-plus"></i></a>
 </div>
 @endsection
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
