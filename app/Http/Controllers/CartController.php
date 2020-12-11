@@ -45,4 +45,21 @@ class CartController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function remove(Gift $gift)
+    {
+        $cart = session()->get('cart');
+        if ($cart) {
+            if (isset($cart[$gift->id])) {
+                unset($cart[$gift->id]);
+                session()->put('cart', $cart);
+                session()->flash('status', 'Gift was successfully removed from card!');
+                return redirect()->route('home');
+            }
+            session()->flash('error', 'This gift is not on the card!');
+            return redirect()->route('home');
+        }
+        session()->flash('error', 'There are no gifts in the card!');
+        return redirect()->route('home');
+    }
 }

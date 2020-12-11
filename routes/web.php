@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('search');
 Route::get('/add-to-cart/{gift}', App\Http\Controllers\CartController::class)->name('add.cart');
+Route::get('/remove-from-cart/{gift}', [App\Http\Controllers\CartController::class, 'remove'])->name('remove.cart');
