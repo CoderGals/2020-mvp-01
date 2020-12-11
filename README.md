@@ -1,5 +1,3 @@
-# 2020-mvp-01
-
 # Gift App
 
 #### Develop a web app or mobile app that shows different gifts suggestions for different celebrations. The following points should be developed:
