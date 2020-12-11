@@ -29,7 +29,7 @@
             {!! $gifts->links("pagination::bootstrap-4") !!}
         </div>
     </div>
-    <a class="btn btn-primary btn-lg" style="position:fixed;top:92%;left:95%;z-index:999999999"><i class="fa fa-cart-plus"></i></a>
+    <a href="{{ route('cart.index') }}" class="btn btn-primary btn-lg" style="position:fixed;top:92%;left:95%;z-index:999999999"><i class="fa fa-cart-plus"></i></a>
 </div>
 @endsection
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

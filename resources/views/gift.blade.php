@@ -12,7 +12,11 @@
             <span class="d-block" style="float:right">x{{ session()->get('cart')[$gift->id]['quantity'] }} on cart</span>
             <br />
             <div class="d-flex justify-content-between mt-3">
-                <a href="{{ route('add.cart', $gift) }}" class="btn btn-success pull-right" style="float:right"><i class="fa fa-plus"></i></a>
+                <div class="d-flex justify-content-start">
+                    <a href="{{ route('add.cart', $gift) }}" class="btn btn-success pull-right" style="float:right"><i class="fa fa-plus"></i></a>
+                    <a href="{{ route('lower.quantity.cart', $gift) }}" class="btn btn-primary pull-right ml-1"><i class="fa fa-minus"></i></a>
+
+                </div>
                 <a href="{{ route('remove.cart', $gift) }}" class="btn btn-danger pull-right" style="float:right"><i class="fa fa-trash"></i></a>
             </div>
             @else
