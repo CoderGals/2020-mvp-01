@@ -1,7 +1,5 @@
 <div class="col-md-2 mt-2 gift-box">
     <div class="">
-
-
         <div class="gift-box-body  wow fadeIn">
             <img class="w-100 h-auto" src="{{  $gift->pic_url }}" />
             <div class="gift-box-header mt-4 d-flex justify-content-between">
