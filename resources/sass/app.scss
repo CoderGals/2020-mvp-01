@@ -39,3 +39,327 @@
         font-size: 16px;
     }
 }
+
+// ========== LOGIN ============
+.bg-authentication {
+    background-color: #F2F4F4;
+  }
+
+  .bg-authentication #icon-arrow {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+  }
+
+  .bg-authentication .brand-text {
+    color: #5A8DEE;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .bg-authentication .disable-rounded-right {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* IE Specific CSS */
+
+    .bg-authentication {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .bg-full-screen-image {
+    background: url(/img/auth-bg.jpg) center center no-repeat;
+    background-size: cover;
+  }
+
+  .bg-authentication {
+    box-shadow: -8px 20px 25px 0 rgba(25,42,70,.3);
+}
+
+.bg-authentication {
+    background-color: #F2F4F4;
+}
+.card {
+    margin-bottom: 2.2rem;
+    box-shadow: -8px 12px 18px 0 rgba(25,42,70,.13);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.flexbox-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 992px) {
+.bg-authentication .disable-rounded-right {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+}
+.card .card {
+    box-shadow: none!important;
+    background-color:white;
+}
+
+
+.divider {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.divider .divider-text {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0 1rem;
+    background-color: #FFF;
+}
+
+.divider .divider-text:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    border-top: 1px solid #DFE3E7;
+}
+.divider .divider-text:before {
+    right: 100%;
+}
+
+.divider .divider-text:after, .divider .divider-text:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    border-top: 1px solid #DFE3E7;
+}
+.text-muted {
+    color: #828D99!important;
+}
+
+.btn-google {
+    border-color: #FFF;
+}
+.btn-google, .btn-google:hover {
+    background-color: #DD4B39;
+    color: #FFF;
+}
+
+.btn-social, .btn-social-icon {
+    position: relative;
+    padding-left: 3rem;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-social>:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3rem;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,.2);
+}
+
+.btn-facebook {
+    border-color: #FFF;
+}
+
+.btn-facebook, .btn-facebook:hover {
+    background-color: #3B5998;
+    color: #FFF;
+}
+.btn-social, .btn-social-icon {
+    position: relative;
+    padding-left: 3rem;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-social i {
+    margin-top: - 0.2rem;
+}
+
+.card {
+    border: none;
+}
+
+.text-bold-600 {
+    font-weight: 600;
+}
+
+label {
+    color: #475F7B;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.4em + .94rem + 3.7px);
+    padding: .47rem .8rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #475F7B;
+    background-color: #FFF;
+    border: 1px solid #DFE3E7;
+    border-radius: .267rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.badge, .btn, .btn-link, .custom-select, .dropdown-item, .form-control, .input-group-text {
+    font-weight: 400;
+}
+
+.checkbox input:checked~label:before {
+    background-color: #FFF;
+    border: 1px solid #DFE3E7;
+}
+
+.checkbox.checkbox-sm label::after, .checkbox.checkbox-sm label::before {
+    width: 15px;
+    height: 15px;
+    top: 3px;
+}
+.checkbox label:before {
+    content: '';
+    border-radius: 4px;
+}
+.checkbox.checkbox-sm input:checked~label:after {
+    height: 5px;
+    width: 8px;
+    top: 7px;
+}
+.checkbox input:checked~label:after {
+    border-top-style: none;
+    border-right-style: none;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    height: .4rem;
+    width: .8rem;
+    border-color: #5A8DEE;
+    border-radius: 0;
+    border-width: 2px;
+    top: 6px;
+    left: 4px;
+}
+.checkbox label:after {
+    content: ' ';
+    border: 1px solid #DFE3E7;
+    border-radius: 4px;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+}
+.checkbox label:after, .checkbox label:before {
+    height: 20px;
+    width: 20px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.text-right {
+    text-align: right!important;
+}
+.text-left {
+    text-align: left!important;
+}
+
+.checkbox {
+    position: relative;
+    display: inline-block;
+}
+.checkbox label {
+    margin-left: 1.75rem;
+    margin-bottom: 0;
+}
+
+.checkbox input[type=checkbox], .radio input[type=radio] {
+    display: none;
+}
+.checkbox label, .custom-checkbox label, .custom-radio label {
+    font-size: 1rem;
+    text-transform: none;
+}
+
+.card-header:first-child {
+    border-radius: calc(.267rem - 0px) calc(.267rem - 0px) 0 0;
+}
+.card-header {
+    border-bottom: 0 solid #DFE3E7;
+}
+.card-header {
+    padding: 1.4rem 1.7rem;
+    background-color: transparent;
+}
+.card .card-header .card-title {
+    margin-bottom: 0;
+}
+.card .card-title {
+    font-weight: 400;
+    letter-spacing: .05rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    text-transform: capitalize;
+
+}
+
+.card .card-header~.card-content .card-body {
+    padding-top: 0;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.7rem;
+}
+
+.btn-primary.glow {
+    box-shadow: 0 2px 4px 0 rgba(90,141,238,.5)!important;
+}
+
+#icon-arrow {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+}
+
+.btn-primary {
+    border-color: #2C6DE9!important;
+    background-color: #5A8DEE!important;
+    color: #FFF;
+}
+
+.position-relative {
+    position: relative!important;
+}
