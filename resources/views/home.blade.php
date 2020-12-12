@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
+@include('home.header')
+<!--HERO SECTION END-->
+
+<div class="container-fluid px-4">
     <div class="row">
         <div class="col-lg-6">
             <input class="form-control" id="search" placeholder="Type a keyword..." />
         </div>
-   
-        <div class="col-lg-6">
+
+        <div class="col-lg-6 mt-4 pt-2">
             <select class="form-control" id="category" aria-placeholder="Filter by category">
                 @php
                 $categories = App\Models\Category::all()
@@ -21,9 +25,9 @@
             @include('layouts.success')
         </div>
     </div>
-    <div class="row justify-content-center content">
+    <div class="row content">
         @foreach($gifts as $gift)
-       @include('gift', $gift)
+        @include('gift', $gift)
         @endforeach
         <div class="col-lg-12 mt-4">
             {!! $gifts->links("pagination::bootstrap-4") !!}
@@ -53,7 +57,7 @@
                 url: '{{URL::to("search")}}',
                 data: {
                     'search': $value,
-                    'category' : $category,
+                    'category': $category,
                 },
                 success: function(data) {
                     $('.content').html(data);

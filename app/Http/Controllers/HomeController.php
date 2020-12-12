@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $gifts = Gift::paginate(10);
+        $gifts = Gift::paginate(12);
         $categories = Category::all();
 
         return view('home', compact('gifts', 'categories'));
@@ -46,7 +46,7 @@ class HomeController extends Controller
                  });
              }
 
-            $gifts = $gifts->paginate(10);
+            $gifts = $gifts->paginate(12);
             foreach ($gifts as $gift) {
                 $output = $output . '<div class="col-md-3 mt-2">' .
                     '<div class="card">' .

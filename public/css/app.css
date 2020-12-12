@@ -10903,3 +10903,34 @@ a.text-dark:focus {
   }
 }
 
+.cart {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px 5px;
+  padding: 20px;
+  margin-top: 40px;
+  z-index: 2;
+  position: relative;
+  z-index: 2;
+  background: white;
+}
+
+.cart-page {
+  background-image: url("https://image.freepik.com/free-psd/abstract-background-design_1297-82.jpg");
+}
+
+.gift-box {
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.gift-box:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px 5px;
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+
+.gift-box .name {
+  font-weight: bold;
+  color: black;
+  font-size: 16px;
+}
+
