@@ -15,10 +15,6 @@
                                 </h3>
               </div>
             </div>
-            <div class="text-center">
-              <p> <small> Please enter your details to sign up and be part of our great community</small>
-              </p>
-            </div>
             <div class="card-content">
               <div class="card-body">
                 <form method="POST" action="{{ route('register') }}">

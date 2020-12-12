@@ -18,11 +18,7 @@
             <div class="card-content">
               <div class="card-body">
             
-                <div class="divider">
-                  <div class="divider-text text-uppercase text-muted">
-                    <small>or login with email</small>
-                  </div>
-                </div>
+             
                 {{-- form  --}}
                 <form method="POST" action="{{ route('login') }}">
                   @csrf

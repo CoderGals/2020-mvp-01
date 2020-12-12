@@ -33,5 +33,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/add-to-list/{gift}', [App\Http\Controllers\GiftsController::class, 'index'])->name('add.favourites');
     Route::post('/add-to-list/{gift}', [App\Http\Controllers\GiftsController::class, 'store'])->name('store.favourites');
     Route::get('/remove-from-list/{item}', [App\Http\Controllers\GiftsController::class, 'remove'])->name('remove.favourites');
-
+    Route::get('/celebration/{category}', App\Http\Controllers\CelebrationController::class)->name('celebration');
 });

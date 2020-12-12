@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Celebration;
 use App\Models\Gift;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -22,7 +23,15 @@ class DatabaseSeeder extends Seeder
              'email' => 'example@gmail.com',
              'password' => Hash::make('password')
          ]);
-        Category::factory(10)->create();
+        $categories = Category::factory(10)->create();
+        $calebrations = Celebration::factory(10)->create();
+
+        $index = 0;
+        foreach($categories as $category) {
+            
+            $category->celebrations()->sync([$category->id]);
+            $index++;
+        }
 
         $gifts =  Gift::factory(10)->create();
 

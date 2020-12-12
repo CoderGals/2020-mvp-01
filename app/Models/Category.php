@@ -13,4 +13,9 @@ class Category extends Model
     public $timestamps = true;
 
     protected $guarded = [];
+
+    public function celebrations()
+    {
+        return $this->belongsToMany(Celebration::class, 'category_celebration');
+    }
 }
