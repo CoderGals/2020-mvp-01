@@ -12,6 +12,7 @@ class CreateFavouriteGiftListsTable extends Migration {
 		Schema::create('favourite_gift_lists', function(Blueprint $table) {
 			$table->increments('id');
 			$table->timestamps();
+			$table->string('name');
 			$table->integer('user_id')->unsigned()->index();
 		});
 	}

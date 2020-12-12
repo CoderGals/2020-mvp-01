@@ -27,4 +27,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/lower-quantity/{gift}', [App\Http\Controllers\CartController::class, 'lowerQuantity'])->name('lower.quantity.cart');
     Route::get('/cart/index', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
     Route::get('/reset', [App\Http\Controllers\CartController::class, 'resetCard'])->name('reset.card');
+    Route::get('/lists', [App\Http\Controllers\FavouriteGiftListController::class, 'index'])->name('lists.index');
+    Route::post('/lists', [App\Http\Controllers\FavouriteGiftListController::class, 'store'])->name('lists.store');
+    Route::get('/lists/{list}', [App\Http\Controllers\FavouriteGiftListController::class, 'show'])->name('lists.show');
+
 });
