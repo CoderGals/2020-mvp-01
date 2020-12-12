@@ -30,5 +30,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/lists', [App\Http\Controllers\FavouriteGiftListController::class, 'index'])->name('lists.index');
     Route::post('/lists', [App\Http\Controllers\FavouriteGiftListController::class, 'store'])->name('lists.store');
     Route::get('/lists/{list}', [App\Http\Controllers\FavouriteGiftListController::class, 'show'])->name('lists.show');
+    Route::get('/add-to-list/{gift}', [App\Http\Controllers\GiftsController::class, 'index'])->name('add.favourites');
+    Route::post('/add-to-list/{gift}', [App\Http\Controllers\GiftsController::class, 'store'])->name('store.favourites');
+    Route::get('/remove-from-list/{item}', [App\Http\Controllers\GiftsController::class, 'remove'])->name('remove.favourites');
 
 });

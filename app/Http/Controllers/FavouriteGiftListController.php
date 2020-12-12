@@ -27,7 +27,6 @@ class FavouriteGiftListController extends Controller
 
     public function show(FavouriteGiftLists $list) {
 
-       // dd($list->('items'));
         $list = $list->load('items');
         return view('show', compact('list'));
     }

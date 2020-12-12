@@ -45,9 +45,7 @@ class HomeController extends Controller
                      $query->where('category_id', $request->category);
                  });
              }
-            //  else {
-            //     $gifts = Gift::paginate(10);
-            // }
+
             $gifts = $gifts->paginate(10);
             foreach ($gifts as $gift) {
                 $output = $output . '<div class="col-md-3 mt-2">' .

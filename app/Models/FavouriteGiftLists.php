@@ -13,7 +13,7 @@ class FavouriteGiftLists extends Model
 
     public function items()
     {
-        return $this->hasMany(FavouriteGiftListItem::class, 'favourite_gift_list_id	');
+        return $this->hasMany(FavouriteGiftListItem::class, 'favourite_gift_list_id');
     }
 
 }

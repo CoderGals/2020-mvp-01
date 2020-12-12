@@ -1,6 +1,10 @@
 <div class="col-md-3 mt-2">
     <div class="card">
-        <div class="card-header">{{ $gift->name }}</div>
+        <div class="card-header d-flex justify-content-between">
+        <div>{{ $gift->name }}
+        </div>
+           <a  href="{{ route('add.favourites', $gift) }}"> <i class="fa fa-star" style="color:green"></i> </a>
+    </div>
 
         <div class="card-body">
             <img class="w-100 h-auto" src="{{  $gift->pic_url }}" />
