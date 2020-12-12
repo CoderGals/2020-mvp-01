@@ -76,6 +76,9 @@
             updateData()
             updateCelebrations()
         })
+        $('#celebration').on('change', function() {
+            updateData()
+        })
 
         function updateCelebrations() {
             $category = $('#category').val();
@@ -99,12 +102,14 @@
         function updateData() {
             $value = $('#search').val();
             $category = $('#category').val();
+            $celebration = $('#celebration').val();
             $.ajax({
                 type: 'get',
                 url: '{{URL::to("search")}}',
                 data: {
                     'search': $value,
                     'category': $category,
+                    'celebration': $celebration
                 },
                 success: function(data) {
                     $('.content').html(data);

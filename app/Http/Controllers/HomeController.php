@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $gifts = Gift::paginate(12);
+        $gifts = Gift::paginate(10);
         $categories = Category::all();
 
         return view('home', compact('gifts', 'categories'));
@@ -46,10 +46,16 @@ class HomeController extends Controller
                 });
             }
 
-            $gifts = $gifts->paginate(12);
+            if ($request->category && strlen($request->celebration)) {
+                $gifts = $gifts->whereHas('celebrations', function ($query) use ($request) {
+                    $query->where('celebration_id', $request->celebration);
+                });
+            }
+
+            $gifts = $gifts->paginate(10);
             foreach ($gifts as $gift) {
                 $output = $output . '<div class="col-md-2 mt-2 gift-box"><div class=""><div class="gift-box-body  wow fadeIn">' .
-                    '<img class="w-100 h-auto" src="' .  $gift->pic_url . '" />' .
+                    '<img style="height:200px;object-fit:cover;width:100%" src="' .  $gift->pic_url . '" />' .
                     '<div class="gift-box-header mt-4 d-flex justify-content-between">' .
                     '<div class="name">' . $gift->name . '</div>' .
                     '<a href="' . route('add.favourites', $gift) . '"> <i class="fa fa-star" style="color:green"></i> </a></div></div>' .

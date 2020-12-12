@@ -23,5 +23,8 @@ class Gift extends Model
     {
         return $this->belongsToMany(Category::class, 'gift_category');
     }
-
+    public function celebrations()
+    {
+        return $this->belongsToMany(Celebration::class, 'gift_celebration');
+    }
 }
