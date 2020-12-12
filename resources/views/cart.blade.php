@@ -1,7 +1,8 @@
-@extends('layouts.cart')
+@extends('layouts.app')
 
 @section('content')
-<div class="container cart">
+<div class="hero">
+<div class="container ">
     <div class="row">
         <div class="col-lg-12 mb-4">
             <a href="{{ route('reset.card') }}" class="btn btn-danger"><i class="fa fa-power-off mr-2"></i>Reset Card</a>
@@ -59,4 +60,6 @@
         </div>
     </div>
 </div>
+</div>
+
 @endsection

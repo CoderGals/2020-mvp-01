@@ -24,7 +24,10 @@
 
 .gift-box {
     padding: 20px;
+    margin: 20px;
     transition: transform .2s;
+    border:1px solid lightcoral;
+    border-radius: 10px;
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px 5px;
         transform: scale(1.1);

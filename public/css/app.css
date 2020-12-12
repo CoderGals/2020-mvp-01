@@ -10919,7 +10919,10 @@ a.text-dark:focus {
 
 .gift-box {
   padding: 20px;
+  margin: 20px;
   transition: transform 0.2s;
+  border: 1px solid lightcoral;
+  border-radius: 10px;
 }
 
 .gift-box:hover {
