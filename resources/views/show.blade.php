@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="card-body">
-                    <img class="w-100 h-auto" src="{{  $item->gift->pic_url }}" />
+                    <img style="height:200px;object-fit:cover;width:100%" src="{{  $item->gift->pic_url }}" />
                     <p>{{ $item->gift->description }}</p>
                 </div>
                 <div class="card-footer">

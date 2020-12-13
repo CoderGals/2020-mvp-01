@@ -89,7 +89,6 @@
         </main>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="js/evenfly.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/wow.min.js"></script>
@@ -97,6 +96,8 @@
     <script>
         new WOW().init();
     </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

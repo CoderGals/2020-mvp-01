@@ -18,6 +18,15 @@ $(document).ready(
 //SMOOTHSCROLL
 //========================
 $(function () {
+    $("#exampleModal").click(function(){
+        $(".modal").modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+    });
+});
+
+$(function () {
     $('a[href*="#"]:not([href="#"])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
